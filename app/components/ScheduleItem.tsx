@@ -6,10 +6,10 @@ interface ScheduleItemProps {
   time: string;
   title: string;
   description: string;
-  iconColor: string;
+  icon: React.ReactNode;
 }
 
-const ScheduleItem = ({ time, title, description, iconColor }: ScheduleItemProps) => {
+const ScheduleItem = ({ time, title, description, icon }: ScheduleItemProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -19,7 +19,7 @@ const ScheduleItem = ({ time, title, description, iconColor }: ScheduleItemProps
         className="w-full text-left flex justify-between items-center"
       >
         <div className="flex items-center">
-          <div className={`w-4 h-4 rounded-full ${iconColor} mr-4`}></div>
+          <div className="text-2xl mr-4">{icon}</div>
           <span className="text-lg font-bold text-blue-600 mr-4">{time}</span>
           <span className="text-lg font-semibold">{title}</span>
         </div>

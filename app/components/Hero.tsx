@@ -10,14 +10,14 @@ const Hero = () => {
     <section
       className="relative flex items-center justify-center text-white"
       style={{
-        backgroundImage: 'url(https://images.unsplash.com/photo-1540541338287-41700207dee6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=870)',
+        backgroundImage: 'url(https://images.unsplash.com/photo-1610641818989-c2051b5e2cfd?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=870)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         height: '100vh',
       }}
     >
       <div className="absolute inset-0 bg-black opacity-50"></div>
-      <div className="relative z-10 text-center pt-16 px-4 bg-white/20 backdrop-blur-lg p-8 rounded-lg">
+      <div className="relative z-10 text-center px-4 bg-white/20 backdrop-blur-lg p-8 rounded-3xl max-w-2xl mx-auto min-h-[300px] flex flex-col justify-center">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -53,7 +53,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
           href="#register"
-          className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg transform transition-transform duration-200 hover:scale-105"
+          className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg transform transition-transform duration-200 hover:scale-105 w-48 mx-auto"
         >
           Register Now
         </motion.a>

@@ -4,37 +4,38 @@ import React from 'react';
 import ScheduleItem from './ScheduleItem';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { FaBus, FaCoffee, FaUtensils, FaGamepad, FaFlagCheckered } from 'react-icons/fa';
 
 const scheduleData = [
   {
     time: '9:00 AM',
     title: 'Departure from BRAC University',
     description: 'We will depart from the BRAC University campus by bus. Please be on time!',
-    iconColor: 'bg-red-500',
+    icon: <FaBus className="text-red-500" />,
   },
   {
     time: '11:00 AM',
     title: 'Arrival at the Resort & Welcome Drinks',
     description: 'Upon arrival, you will be greeted with welcome drinks and a chance to settle in.',
-    iconColor: 'bg-green-500',
+    icon: <FaCoffee className="text-green-500" />,
   },
   {
     time: '1:00 PM',
     title: 'Lunch',
     description: 'A delicious buffet lunch will be served with a variety of options to choose from.',
-    iconColor: 'bg-yellow-500',
+    icon: <FaUtensils className="text-yellow-500" />,
   },
   {
     time: '2:00 PM - 5:00 PM',
     title: 'Activities & Games',
     description: 'Get ready for a fun-filled afternoon with team-building activities, a coding competition, and other games.',
-    iconColor: 'bg-purple-500',
+    icon: <FaGamepad className="text-purple-500" />,
   },
   {
     time: '5:00 PM',
     title: 'Departure from the Resort',
     description: 'We will depart from the resort and head back to the BRAC University campus.',
-    iconColor: 'bg-indigo-500',
+    icon: <FaFlagCheckered className="text-indigo-500" />,
   },
 ];
 
@@ -78,7 +79,7 @@ const Schedule = () => {
                 time={item.time}
                 title={item.title}
                 description={item.description}
-                iconColor={item.iconColor}
+                icon={item.icon}
               />
             </motion.div>
           ))}
