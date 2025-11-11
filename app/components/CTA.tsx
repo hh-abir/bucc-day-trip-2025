@@ -10,7 +10,7 @@ const CTA = () => {
         <div
           className="p-12 rounded-3xl shadow-lg text-white h-64 flex items-center justify-end"
           style={{
-            backgroundImage: 'url(/banner.png)',
+            backgroundImage: 'url(/Banner.png)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
