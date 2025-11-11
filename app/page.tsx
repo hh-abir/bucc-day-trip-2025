@@ -21,9 +21,9 @@ export default function Home() {
       <WhatsIncluded />
       <About />
       <Venue />
-      <FAQ />
       <Schedule />
       <Terms />
+      <FAQ />
       <CTA />
       <Footer />
     </main>
