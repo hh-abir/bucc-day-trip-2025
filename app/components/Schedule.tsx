@@ -1,47 +1,59 @@
 import React from 'react';
+import ScheduleItem from './ScheduleItem';
+
+const scheduleData = [
+  {
+    time: '9:00 AM',
+    title: 'Departure from BRAC University',
+    description: 'We will depart from the BRAC University campus by bus. Please be on time!',
+    iconColor: 'bg-red-500',
+  },
+  {
+    time: '11:00 AM',
+    title: 'Arrival at the Resort & Welcome Drinks',
+    description: 'Upon arrival, you will be greeted with welcome drinks and a chance to settle in.',
+    iconColor: 'bg-green-500',
+  },
+  {
+    time: '1:00 PM',
+    title: 'Lunch',
+    description: 'A delicious buffet lunch will be served with a variety of options to choose from.',
+    iconColor: 'bg-yellow-500',
+  },
+  {
+    time: '2:00 PM - 5:00 PM',
+    title: 'Activities & Games',
+    description: 'Get ready for a fun-filled afternoon with team-building activities, a coding competition, and other games.',
+    iconColor: 'bg-purple-500',
+  },
+  {
+    time: '5:00 PM',
+    title: 'Departure from the Resort',
+    description: 'We will depart from the resort and head back to the BRAC University campus.',
+    iconColor: 'bg-indigo-500',
+  },
+];
 
 const Schedule = () => {
   return (
     <section id="schedule" className="py-20 bg-gray-100 text-gray-900">
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold text-center mb-12">Trip Schedule</h2>
-        <div className="relative max-w-2xl mx-auto">
-          <div className="border-l-2 border-blue-500 absolute h-full left-4"></div>
-          <div className="mb-8 flex items-center w-full">
-            <div className="bg-blue-500 rounded-full h-8 w-8 z-10"></div>
-            <div className="pl-8">
-              <p className="font-bold">9:00 AM</p>
-              <p>Departure from BRAC University</p>
+        <div className="max-w-2xl mx-auto relative">
+          {/* This div creates the vertical line for the timeline effect */}
+          <div className="absolute left-6 top-0 bottom-0 w-1 bg-blue-300 hidden md:block"></div>
+          {scheduleData.map((item, index) => (
+            <div key={index} className="relative md:pl-12">
+              {/* This div creates the circle on the timeline */}
+              <div className="hidden md:block absolute left-4 top-6 w-4 h-4 rounded-full bg-blue-500 z-10"></div>
+              <ScheduleItem
+                time={item.time}
+                title={item.title}
+                description={item.description}
+                iconColor={item.iconColor}
+              />
             </div>
-          </div>
-          <div className="mb-8 flex items-center w-full">
-            <div className="bg-blue-500 rounded-full h-8 w-8 z-10"></div>
-            <div className="pl-8">
-              <p className="font-bold">11:00 AM</p>
-              <p>Arrival at the Resort & Welcome Drinks</p>
-            </div>
-          </div>
-          <div className="mb-8 flex items-center w-full">
-            <div className="bg-blue-500 rounded-full h-8 w-8 z-10"></div>
-            <div className="pl-8">
-              <p className="font-bold">1:00 PM</p>
-              <p>Lunch</p>
-            </div>
-          </div>
-          <div className="mb-8 flex items-center w-full">
-            <div className="bg-blue-500 rounded-full h-8 w-8 z-10"></div>
-            <div className="pl-8">
-              <p className="font-bold">2:00 PM - 5:00 PM</p>
-              <p>Activities & Games</p>
-            </div>
-          </div>
-          <div className="flex items-center w-full">
-            <div className="bg-blue-500 rounded-full h-8 w-8 z-10"></div>
-            <div className="pl-8">
-              <p className="font-bold">5:00 PM</p>
-              <p>Departure from the Resort</p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
