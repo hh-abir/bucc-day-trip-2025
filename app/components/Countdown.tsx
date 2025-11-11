@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import React from 'react';
 
 const Countdown = () => {
   const [hasMounted, setHasMounted] = useState(false);
@@ -42,7 +43,7 @@ const Countdown = () => {
     return null;
   }
 
-  const timerComponents: JSX.Element[] = [];
+  const timerComponents: React.ReactNode[] = [];
 
   Object.keys(timeLeft).forEach((interval) => {
     if (!timeLeft[interval as keyof typeof timeLeft]) {
