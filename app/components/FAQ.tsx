@@ -46,7 +46,7 @@ const FAQ = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="max-w-2xl mx-auto"
+          className="max-w-2xl mx-auto px-4"
         >
           {faqData.map((faq, index) => (
             <FAQItem key={index} question={faq.question} answer={faq.answer} />

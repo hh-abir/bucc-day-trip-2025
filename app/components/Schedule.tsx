@@ -88,7 +88,7 @@ const Schedule = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="max-w-2xl mx-auto relative"
+          className="max-w-2xl mx-auto relative px-4"
         >
           <div className="border-l-2 border-blue-500 absolute h-full left-6 md:left-1/2 transform md:-translate-x-1/2"></div>
           {scheduleData.map((item, index) => (
