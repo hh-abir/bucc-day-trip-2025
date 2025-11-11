@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://bucc-day-trip-2025.vercel.app"), // Set the deployment URL
   title: "BUCC Day Long Tour 2025",
   description: "Join BRAC University Computer Club for an unforgettable day-long trip filled with fun, networking, and adventure!",
   openGraph: {
