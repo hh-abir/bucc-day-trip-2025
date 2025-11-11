@@ -17,7 +17,7 @@ const Hero = () => {
       }}
     >
       <div className="absolute inset-0 bg-black opacity-50"></div>
-      <div className="relative z-10 text-center px-4 bg-white/20 backdrop-blur-lg p-8 rounded-3xl max-w-2xl mx-auto min-h-[300px] flex flex-col justify-center">
+      <div className="relative z-10 text-center px-4 bg-white/20 backdrop-blur-lg p-8 rounded-3xl w-full max-w-2xl mx-auto min-h-[300px] flex flex-col justify-center">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -26,9 +26,7 @@ const Hero = () => {
         >
           <Typewriter
             options={{
-              strings: [
-                `<span class="text-blue-500">BUCC</span> <span class="text-pink-500">Day Long</span> <span class="text-blue-500">Trip</span> <span class="text-pink-500">2025</span>`,
-              ],
+              strings: ['BUCC Day Long Trip 2025'],
               autoStart: true,
               loop: true,
             }}
@@ -54,7 +52,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          href="#register"
+          href="https://docs.google.com/forms/d/e/1FAIpQLScExVF0Ii7g9A_IgqEI0Gp54bVNduyTddoNE3y3ZYQmjGZ2JQ/viewform"
           className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg transform transition-transform duration-200 hover:scale-105 w-48 mx-auto"
         >
           Register Now

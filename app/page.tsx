@@ -5,7 +5,6 @@ import WhatsIncluded from './components/WhatsIncluded';
 import About from './components/About';
 import Venue from './components/Venue';
 import FAQ from './components/FAQ';
-import Sponsors from './components/Sponsors';
 import Schedule from './components/Schedule';
 import CTA from './components/CTA';
 import Terms from './components/Terms';
@@ -23,7 +22,6 @@ export default function Home() {
       <About />
       <Venue />
       <FAQ />
-      <Sponsors />
       <Schedule />
       <Terms />
       <CTA />

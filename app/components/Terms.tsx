@@ -18,7 +18,7 @@ const Terms = () => {
         transition={{ duration: 0.8 }}
         className="container mx-auto text-center"
       >
-        <h2 className="text-3xl font-bold mb-8">Terms and Conditions</h2>
+        <h2 className="text-3xl font-bold text-center mb-12 section-title-gradient">Terms and Conditions</h2>
         <div className="max-w-3xl mx-auto text-left">
           <p className="mb-4">
             By registering for this event, you agree to the following terms and conditions. Please read them carefully.
