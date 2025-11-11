@@ -3,37 +3,73 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FaBus, FaCoffee, FaUtensils, FaGamepad, FaFlagCheckered } from 'react-icons/fa';
+import { FaBus, FaCoffee, FaUtensils, FaGamepad, FaUsers, FaMusic, FaFlagCheckered, FaWalking } from 'react-icons/fa';
 
 const scheduleData = [
   {
-    time: '9:00 AM',
-    title: 'Departure from BRAC University',
-    description: 'We will depart from the BRAC University campus by bus. Please be on time!',
+    time: '7:00 AM',
+    title: 'Arrival in Campus',
+    description: 'All participants are requested to arrive at the campus on time.',
+    icon: <FaWalking />,
+  },
+  {
+    time: '7:30 AM',
+    title: 'Journey Start',
+    description: 'The bus will depart from the campus. Please ensure you are on board.',
     icon: <FaBus />,
   },
   {
-    time: '11:00 AM',
-    title: 'Arrival at the Resort & Welcome Drinks',
-    description: 'Upon arrival, you will be greeted with welcome drinks and a chance to settle in.',
-    icon: <FaCoffee />,
+    time: '9:30 AM',
+    title: 'Ice Breaking Session',
+    description: 'A fun session to get to know your fellow participants.',
+    icon: <FaUsers />,
   },
   {
-    time: '1:00 PM',
-    title: 'Lunch',
-    description: 'A delicious buffet lunch will be served with a variety of options to choose from.',
-    icon: <FaUtensils />,
-  },
-  {
-    time: '2:00 PM - 5:00 PM',
-    title: 'Activities & Games',
-    description: 'Get ready for a fun-filled afternoon with team-building activities, a coding competition, and other games.',
+    time: '10:00 AM',
+    title: 'Tic Tac Toe',
+    description: 'Engage in a classic game of Tic Tac Toe with a twist!',
     icon: <FaGamepad />,
   },
   {
-    time: '5:00 PM',
-    title: 'Departure from the Resort',
-    description: 'We will depart from the resort and head back to the BRAC University campus.',
+    time: '11:00 AM - 1:00 PM',
+    title: 'Football & Cricket',
+    description: 'Enjoy outdoor sports activities like Football and Cricket.',
+    icon: <FaGamepad />,
+  },
+  {
+    time: '1:00 PM - 2:30 PM',
+    title: 'Lunch',
+    description: 'A delicious lunch will be served.',
+    icon: <FaUtensils />,
+  },
+  {
+    time: '2:30 PM - 3:00 PM',
+    title: 'Indoor Activity',
+    description: 'Participate in various indoor games and activities.',
+    icon: <FaGamepad />,
+  },
+  {
+    time: '3:00 PM - 4:00 PM',
+    title: 'Musical Chair',
+    description: 'A lively game of musical chairs for everyone.',
+    icon: <FaMusic />,
+  },
+  {
+    time: '4:00 PM - 5:00 PM',
+    title: 'Tug of War',
+    description: 'Team up and test your strength in a game of Tug of War.',
+    icon: <FaUsers />,
+  },
+  {
+    time: '5:00 PM - 6:00 PM',
+    title: 'Snacks & Closing Session',
+    description: 'Enjoy some snacks and a closing session to wrap up the day.',
+    icon: <FaCoffee />,
+  },
+  {
+    time: '6:00 PM',
+    title: 'Departure',
+    description: 'The bus will depart for the campus.',
     icon: <FaFlagCheckered />,
   },
 ];
@@ -52,7 +88,7 @@ const Schedule = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto relative"
+          className="max-w-2xl mx-auto relative"
         >
           <div className="border-l-2 border-blue-500 absolute h-full left-6 md:left-1/2 transform md:-translate-x-1/2"></div>
           {scheduleData.map((item, index) => (
@@ -63,11 +99,11 @@ const Schedule = () => {
               }`}
             >
               <div className={`flex items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
-                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500 text-white text-xl z-10 ml-1">
+                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500 text-white text-xl z-10">
                   {item.icon}
                 </div>
                 <div
-                  className={`p-4 rounded-lg shadow-md bg-white flex-1 ${
+                  className={`p-4 rounded-lg shadow-md bg-white ${
                     index % 2 === 0 ? 'ml-4' : 'mr-4'
                   }`}
                 >

@@ -26,7 +26,9 @@ const Hero = () => {
         >
           <Typewriter
             options={{
-              strings: ['BUCC Day Long Trip 2025'],
+              strings: [
+                `<span class="text-blue-500">BUCC</span> <span class="text-pink-500">Day Long</span> <span class="text-blue-500">Trip</span> <span class="text-pink-500">2025</span>`,
+              ],
               autoStart: true,
               loop: true,
             }}
