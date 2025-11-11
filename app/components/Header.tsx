@@ -24,7 +24,7 @@ const Header = () => {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollY]);
+  }, []);
 
   return (
     <motion.header
@@ -37,10 +37,7 @@ const Header = () => {
     >
       <div className="container mx-auto flex justify-between items-center p-4">
         <div className="flex items-center">
-          <img src="/bucc.svg" alt="BUCC Logo" className="h-10 w-10 mr-2 bg-white p-1 rounded-md" />
-          <span className={`font-bold text-xl ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
-            BUCC
-          </span>
+          <img src="/bucclogo.png" alt="BUCC Logo" className="h-16 w-auto mr-2"/>
         </div>
         <nav className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 space-x-4">
           <a href="#about" className={`hover:text-blue-500 ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
