@@ -1,29 +1,53 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <header
-      className="relative text-white py-4 px-8"
-      style={{
-        backgroundImage: 'url(https://images.unsplash.com/photo-1610641818989-c2051b5e2cfd?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=870)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
-    >
-      <div className="absolute inset-0 bg-black opacity-50"></div>
-      <div className="relative z-10 container mx-auto flex justify-between items-center">
+    <header className="absolute top-0 left-0 w-full z-10 text-white py-4 px-8">
+      <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
           <img src="/globe.svg" alt="BUCC Logo" className="h-8 w-8 mr-2" />
           <span className="text-xl font-bold">BUCC</span>
         </div>
-        <nav>
+        <div className="hidden md:flex md:flex-grow justify-center">
           <ul className="flex space-x-4">
             <li><a href="#about" className="hover:text-gray-400">About</a></li>
             <li><a href="#schedule" className="hover:text-gray-400">Schedule</a></li>
             <li><a href="#register" className="hover:text-gray-400">Register</a></li>
           </ul>
-        </nav>
+        </div>
+        <div className="md:hidden">
+          <button onClick={() => setIsOpen(!isOpen)}>
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div className="hidden md:block w-24"></div> {/* Dummy div */}
       </div>
+      {isOpen && (
+        <div className="md:hidden mt-4">
+          <ul className="flex flex-col items-center space-y-4">
+            <li><a href="#about" className="hover:text-gray-400">About</a></li>
+            <li><a href="#schedule" className="hover:text-gray-400">Schedule</a></li>
+            <li><a href="#register" className="hover:text-gray-400">Register</a></li>
+          </ul>
+        </div>
+      )}
     </header>
   );
 };

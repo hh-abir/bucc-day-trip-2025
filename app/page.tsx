@@ -9,8 +9,10 @@ import Footer from './components/Footer';
 export default function Home() {
   return (
     <main>
-      <Header />
-      <Hero />
+      <div className="relative">
+        <Header />
+        <Hero />
+      </div>
       <Opportunity />
       <About />
       <Schedule />
