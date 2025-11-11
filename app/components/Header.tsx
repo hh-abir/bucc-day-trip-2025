@@ -1,63 +1,63 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      setIsScrolled(currentScrollY > 10);
+
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setIsHidden(true);
+      } else {
+        setIsHidden(false);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
 
   return (
     <motion.header
       initial={{ y: -100 }}
-      animate={{ y: 0 }}
+      animate={{ y: isHidden ? -100 : 0 }}
       transition={{ duration: 0.5 }}
-      className="absolute top-0 left-0 w-full z-10 text-white py-4 px-8"
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        isScrolled ? 'bg-white/80 backdrop-blur-lg shadow-md' : 'bg-transparent'
+      }`}
     >
-      <div className="container mx-auto flex justify-between items-center">
+      <div className="container mx-auto flex justify-between items-center p-4">
         <div className="flex items-center">
-          <img src="/globe.svg" alt="BUCC Logo" className="h-8 w-8 mr-2" />
-          <span className="text-xl font-bold">BUCC</span>
+          <img src="/bucc.svg" alt="BUCC Logo" className="h-10 w-10 mr-2 bg-white p-1 rounded-md" />
+          <span className={`font-bold text-xl ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
+            BUCC
+          </span>
         </div>
-        <div className="hidden md:flex md:flex-grow justify-center">
-          <ul className="flex space-x-4">
-            <li><a href="#about" className="hover:text-gray-400">About</a></li>
-            <li><a href="#schedule" className="hover:text-gray-400">Schedule</a></li>
-            <li><a href="#register" className="hover:text-gray-400">Register</a></li>
-          </ul>
-        </div>
-        <div className="md:hidden">
-          <button onClick={() => setIsOpen(!isOpen)}>
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16m-7 6h7"
-              ></path>
-            </svg>
-          </button>
-        </div>
-        <div className="hidden md:block w-24"></div> {/* Dummy div */}
+        <nav className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 space-x-4">
+          <a href="#about" className={`hover:text-blue-500 ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
+            About
+          </a>
+          <a href="#schedule" className={`hover:text-blue-500 ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
+            Schedule
+          </a>
+          <a href="#venue" className={`hover:text-blue-500 ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
+            Venue
+          </a>
+          <a href="#faq" className={`hover:text-blue-500 ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
+            FAQ
+          </a>
+        </nav>
+        <div></div> {/* Placeholder for right side */}
       </div>
-      {isOpen && (
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="md:hidden mt-4"
-        >
-          <ul className="flex flex-col items-center space-y-4">
-            <li><a href="#about" className="hover:text-gray-400">About</a></li>
-            <li><a href="#schedule" className="hover:text-gray-400">Schedule</a></li>
-            <li><a href="#register" className="hover:text-gray-400">Register</a></li>
-          </ul>
-        </motion.div>
-      )}
     </motion.header>
   );
 };

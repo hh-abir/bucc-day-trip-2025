@@ -16,7 +16,7 @@ const faqData = [
   },
   {
     question: 'Can I bring a friend?',
-    answer: 'Yes, you can bring a friend as long as they are a student of BRAC University. They will also need to register for the event.',
+    answer: 'Yes, you can bring a friend as long as they are a BUCC member. They will also need to register for the event.',
   },
   {
     question: 'Is there a refund policy?',

@@ -26,7 +26,7 @@ const Hero = () => {
         >
           <Typewriter
             options={{
-              strings: ['BUCC Day Long Trip 2025'],
+              strings: ['BUCC Day Long Tour 2025'],
               autoStart: true,
               loop: true,
             }}
