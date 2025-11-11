@@ -3,7 +3,9 @@ import Hero from './components/Hero';
 import Opportunity from './components/Opportunity';
 import WhatsIncluded from './components/WhatsIncluded';
 import About from './components/About';
-import Gallery from './components/Gallery';
+import Venue from './components/Venue';
+import FAQ from './components/FAQ';
+import Sponsors from './components/Sponsors';
 import Schedule from './components/Schedule';
 import CTA from './components/CTA';
 import Terms from './components/Terms';
@@ -19,7 +21,9 @@ export default function Home() {
       <Opportunity />
       <WhatsIncluded />
       <About />
-      <Gallery />
+      <Venue />
+      <FAQ />
+      <Sponsors />
       <Schedule />
       <Terms />
       <CTA />
