@@ -22,6 +22,14 @@ const faqData = [
     question: 'Is there a refund policy?',
     answer: 'Unfortunately, we do not offer refunds. However, you can transfer your ticket to another student.',
   },
+  {
+    question: 'Who can I contact for general communication?',
+    answer: 'For general communication, you can contact: Abrar Shaleheen - 01765859336, Nowrin Afrin - 01617611664.',
+  },
+  {
+    question: 'Who can I contact for payment related issues?',
+    answer: 'For payment related issues, you can contact: Sadik - 01732644303.',
+  },
 ];
 
 const FAQ = () => {

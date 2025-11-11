@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { FaEnvelope, FaGlobe } from 'react-icons/fa';
+import { FaEnvelope, FaGlobe, FaPhone } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -33,8 +33,19 @@ const Footer = () => {
           <p className="flex items-center mb-2">
             <FaEnvelope className="mr-2" /> Email: bucc@g.bracu.ac.bd
           </p>
-          <p className="flex items-center">
+          <p className="flex items-center mb-2">
             <FaGlobe className="mr-2" /> Website: <a href="https://www.bracucc.org/" target="_blank" rel="noopener noreferrer" className="hover:underline ml-1">www.bracucc.org</a>
+          </p>
+          <p className="text-lg font-semibold mt-4 mb-2">General Communication:</p>
+          <p className="flex items-center mb-1">
+            <FaPhone className="mr-2" /> Abrar Shaleheen: <a href="tel:+8801765859336" className="hover:underline ml-1">01765859336</a>
+          </p>
+          <p className="flex items-center mb-1">
+            <FaPhone className="mr-2" /> Nowrin Afrin: <a href="tel:+8801617611664" className="hover:underline ml-1">01617611664</a>
+          </p>
+          <p className="text-lg font-semibold mt-4 mb-2">Payment Related Issues:</p>
+          <p className="flex items-center">
+            <FaPhone className="mr-2" /> Sadik: <a href="tel:+8801732644303" className="hover:underline ml-1">01732644303</a>
           </p>
         </div>
 
