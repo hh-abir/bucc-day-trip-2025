@@ -1,12 +1,18 @@
 'use client';
 
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="absolute top-0 left-0 w-full z-10 text-white py-4 px-8">
+    <motion.header
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="absolute top-0 left-0 w-full z-10 text-white py-4 px-8"
+    >
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
           <img src="/globe.svg" alt="BUCC Logo" className="h-8 w-8 mr-2" />
@@ -40,15 +46,19 @@ const Header = () => {
         <div className="hidden md:block w-24"></div> {/* Dummy div */}
       </div>
       {isOpen && (
-        <div className="md:hidden mt-4">
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="md:hidden mt-4"
+        >
           <ul className="flex flex-col items-center space-y-4">
             <li><a href="#about" className="hover:text-gray-400">About</a></li>
             <li><a href="#schedule" className="hover:text-gray-400">Schedule</a></li>
             <li><a href="#register" className="hover:text-gray-400">Register</a></li>
           </ul>
-        </div>
+        </motion.div>
       )}
-    </header>
+    </motion.header>
   );
 };
 

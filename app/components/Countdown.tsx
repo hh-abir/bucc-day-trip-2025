@@ -3,6 +3,12 @@
 import { useState, useEffect } from 'react';
 
 const Countdown = () => {
+  const [hasMounted, setHasMounted] = useState(false);
+
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
+
   const calculateTimeLeft = () => {
     const year = new Date().getFullYear();
     const difference = +new Date(`12/05/${year}`) - +new Date();
@@ -23,12 +29,18 @@ const Countdown = () => {
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
   useEffect(() => {
+    if (!hasMounted) return;
+
     const timer = setTimeout(() => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
 
     return () => clearTimeout(timer);
-  });
+  }, [timeLeft, hasMounted]);
+
+  if (!hasMounted) {
+    return null;
+  }
 
   const timerComponents: JSX.Element[] = [];
 

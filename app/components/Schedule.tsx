@@ -1,5 +1,9 @@
+'use client';
+
 import React from 'react';
 import ScheduleItem from './ScheduleItem';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 const scheduleData = [
   {
@@ -35,15 +39,39 @@ const scheduleData = [
 ];
 
 const Schedule = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, x: -50 },
+    visible: { opacity: 1, x: 0 },
+  };
+
   return (
-    <section id="schedule" className="py-20 bg-gray-100 text-gray-900">
+    <section id="schedule" className="py-20 bg-gray-100 text-gray-900" ref={ref}>
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold text-center mb-12">Trip Schedule</h2>
-        <div className="max-w-2xl mx-auto relative">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate={inView ? 'visible' : 'hidden'}
+          className="max-w-2xl mx-auto relative"
+        >
           {/* This div creates the vertical line for the timeline effect */}
           <div className="absolute left-6 top-0 bottom-0 w-1 bg-blue-300 hidden md:block"></div>
           {scheduleData.map((item, index) => (
-            <div key={index} className="relative md:pl-12">
+            <motion.div key={index} variants={itemVariants} className="relative md:pl-12">
               {/* This div creates the circle on the timeline */}
               <div className="hidden md:block absolute left-4 top-6 w-4 h-4 rounded-full bg-blue-500 z-10"></div>
               <ScheduleItem
@@ -52,9 +80,9 @@ const Schedule = () => {
                 description={item.description}
                 iconColor={item.iconColor}
               />
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

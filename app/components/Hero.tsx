@@ -1,5 +1,8 @@
+'use client';
+
 import React from 'react';
 import Countdown from './Countdown';
+import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
@@ -14,17 +17,39 @@ const Hero = () => {
     >
       <div className="absolute inset-0 bg-black opacity-50"></div>
       <div className="relative z-10 text-center pt-16 px-4">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">BUCC Day Long Trip 2025</h1>
-        <p className="text-lg md:text-xl mb-8">Join us for a day of fun, networking, and adventure!</p>
-        <div className="mb-8">
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-4xl md:text-5xl font-bold mb-4"
+        >
+          BUCC Day Long Trip 2025
+        </motion.h1>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="text-lg md:text-xl mb-8"
+        >
+          Join us for a day of fun, networking, and adventure!
+        </motion.p>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="mb-8"
+        >
           <Countdown />
-        </div>
-        <a
+        </motion.div>
+        <motion.a
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
           href="#register"
           className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg transform transition-transform duration-200 hover:scale-105"
         >
           Register Now
-        </a>
+        </motion.a>
       </div>
     </section>
   );

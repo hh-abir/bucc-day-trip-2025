@@ -1,4 +1,7 @@
+'use client';
+
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const CTA = () => {
   return (
@@ -9,12 +12,20 @@ const CTA = () => {
           Don't miss out on this exciting opportunity to connect with the BUCC community and have a great time.
           Register now to secure your spot!
         </p>
-        <a
+        <motion.a
           href="#"
           className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg transform transition-transform duration-200 hover:scale-105"
+          animate={{
+            scale: [1, 1.05, 1],
+          }}
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
         >
           Register Now
-        </a>
+        </motion.a>
       </div>
     </section>
   );
