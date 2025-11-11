@@ -64,3 +64,4 @@ const WhatsIncluded = () => {
 };
 
 export default WhatsIncluded;
+

@@ -3,27 +3,34 @@
 import React from 'react';
 import Countdown from './Countdown';
 import { motion } from 'framer-motion';
+import Typewriter from 'typewriter-effect';
 
 const Hero = () => {
   return (
     <section
       className="relative flex items-center justify-center text-white"
       style={{
-        backgroundImage: 'url(https://images.unsplash.com/photo-1610641818989-c2051b5e2cfd?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=870)',
+        backgroundImage: 'url(https://images.unsplash.com/photo-1540541338287-41700207dee6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=870)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         height: '100vh',
       }}
     >
       <div className="absolute inset-0 bg-black opacity-50"></div>
-      <div className="relative z-10 text-center pt-16 px-4">
+      <div className="relative z-10 text-center pt-16 px-4 bg-white/20 backdrop-blur-lg p-8 rounded-lg">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-4xl md:text-5xl font-bold mb-4"
+          className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-100 to-purple-300"
         >
-          BUCC Day Long Trip 2025
+          <Typewriter
+            options={{
+              strings: ['BUCC Day Long Trip 2025'],
+              autoStart: true,
+              loop: true,
+            }}
+          />
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
