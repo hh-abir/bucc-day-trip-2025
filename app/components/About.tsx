@@ -60,7 +60,7 @@ const About = () => {
           <p className="text-lg text-slate-600 leading-relaxed mb-12">
             Embark on an exciting day-long adventure with the BRAC University Computer Club (BUCC)! This exclusive
             trip offers a perfect blend of relaxation, networking, and engaging activities. Exclusively for BUCC
-            members, it&apos;s your chance to connect with fellow members from GB and 7 departments (EB, E, GM)
+            members, it&apos;s your chance to connect with fellow members from GB and 7 departments (EB, SE, E, GM)
             without any work or academic pressure, unwind, and create lasting memories. Don&apos;t miss out on this
             unique opportunity to strengthen bonds and enjoy a day filled with fun!
           </p>
