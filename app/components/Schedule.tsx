@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import {
@@ -12,7 +12,9 @@ import {
   FaMusic,
   FaUtensils,
   FaPrayingHands,
-  FaFlagCheckered
+  FaFlagCheckered,
+  FaChevronDown,
+  FaChevronUp
 } from 'react-icons/fa';
 
 const scheduleData = [
@@ -29,11 +31,11 @@ const scheduleData = [
   { time: '5:30 PM', title: 'Departure', description: 'The bus will depart for the campus. Don’t forget your belongings.', icon: <FaFlagCheckered /> },
 ];
 
-
-
-
 const Schedule = () => {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
+  const [isExpanded, setIsExpanded] = useState(true);
+
+  const toggleExpanded = () => setIsExpanded(!isExpanded);
 
   return (
     <section
@@ -42,64 +44,72 @@ const Schedule = () => {
       className="py-20 bg-gradient-to-b from-blue-50 to-white text-gray-900"
     >
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-extrabold text-center mb-16 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent font-platform-bold">
+        
+
+        <h2 className="text-4xl font-extrabold text-center mb-12 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent font-platform-bold">
           Trip Schedule
         </h2>
-
-        <div className="relative max-w-5xl mx-auto">
-          {/* Vertical timeline line */}
-          <div className="absolute left-6 md:left-1/2 top-0 transform md:-translate-x-1/2 w-1 bg-gradient-to-b from-blue-400 via-indigo-400 to-blue-600 h-full rounded-full" />
-
-          {scheduleData.map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-              animate={inView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.6, delay: index * 0.08 }}
-              className={`mb-12 flex flex-col md:flex-row items-center ${
-                index % 2 === 0 ? 'md:justify-start' : 'md:justify-end'
-              }`}
-            >
-              {/* Timeline card */}
-              <div
-                className={`relative flex items-center w-full md:w-1/2 ${
-                  index % 2 === 0
-                    ? 'md:pr-8 md:text-right pl-16 md:pl-0'
-                    : 'md:pl-8 md:text-left pl-16 md:pl-0'
-                }`}
-              >
-                <motion.div
-                  className="bg-white shadow-lg p-6 rounded-2xl border border-gray-100 relative z-10 hover:shadow-xl transition duration-300 md:max-w-[90%]"
-                  whileHover={{ scale: 1.03 }}
-                >
-                  <p className="text-sm text-blue-600 font-semibold mb-1">
-                    {item.time}
-                  </p>
-                  <h3 className="text-lg font-bold">{item.title}</h3>
-                  <p className="text-gray-600 mt-1 text-sm">
-                    {item.description}
-                  </p>
-                </motion.div>
-              </div>
-
-              {/* Icon */}
-              <div
-                className={`absolute ${
-                  index % 2 === 0
-                    ? 'md:left-[50%]'
-                    : 'md:left-[50%]'
-                } left-6 transform md:-translate-x-1/2 bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center z-20 shadow-md ring-4 ring-blue-100`}
-              >
-                <motion.div
-                  whileHover={{ rotate: 10, scale: 1.1 }}
-                  transition={{ type: 'spring', stiffness: 300 }}
-                >
-                  {item.icon}
-                </motion.div>
-              </div>
-            </motion.div>
-          ))}
+        <div className="flex justify-center mb-6">
+          <button
+            onClick={toggleExpanded}
+            className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition"
+          >
+            {isExpanded ? 'Hide Schedule' : 'Show Schedule'}
+            {isExpanded ? <FaChevronUp /> : <FaChevronDown />}
+          </button>
         </div>
+
+        <motion.div
+          initial={false}
+          animate={{ height: isExpanded ? 'auto' : 0, opacity: isExpanded ? 1 : 0 }}
+          transition={{ duration: 0.5, ease: 'easeInOut' }}
+          style={{ overflow: 'hidden' }}
+        >
+          <div className="relative max-w-5xl mx-auto">
+            {/* Vertical timeline line */}
+            <div className="absolute left-6 md:left-1/2 top-0 transform md:-translate-x-1/2 w-1 bg-gradient-to-b from-blue-400 via-indigo-400 to-blue-600 h-full rounded-full" />
+
+            {scheduleData.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                animate={inView ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.6, delay: index * 0.08 }}
+                className={`mb-12 flex flex-col md:flex-row items-center ${index % 2 === 0 ? 'md:justify-start' : 'md:justify-end'
+                  }`}
+              >
+                {/* Timeline card */}
+                <div
+                  className={`relative flex items-center w-full md:w-1/2 ${index % 2 === 0
+                      ? 'md:pr-8 md:text-right pl-16 md:pl-0'
+                      : 'md:pl-8 md:text-left pl-16 md:pl-0'
+                    }`}
+                >
+                  <motion.div
+                    className="bg-white shadow-lg p-6 rounded-2xl border border-gray-100 relative z-10 hover:shadow-xl transition duration-300 md:max-w-[90%]"
+                    whileHover={{ scale: 1.03 }}
+                  >
+                    <p className="text-sm text-blue-600 font-semibold mb-1">{item.time}</p>
+                    <h3 className="text-lg font-bold">{item.title}</h3>
+                    <p className="text-gray-600 mt-1 text-sm">{item.description}</p>
+                  </motion.div>
+                </div>
+
+                {/* Icon */}
+                <div
+                  className={`absolute left-6 md:left-[50%] transform md:-translate-x-1/2 bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center z-20 shadow-md ring-4 ring-blue-100`}
+                >
+                  <motion.div
+                    whileHover={{ rotate: 10, scale: 1.1 }}
+                    transition={{ type: 'spring', stiffness: 300 }}
+                  >
+                    {item.icon}
+                  </motion.div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );
