@@ -25,7 +25,7 @@ const scheduleData = [
   { time: '3:00 PM - 4:00 PM', title: 'Musical Chair', description: 'A lively game of musical chairs for everyone.', icon: <FaMusic /> },
   { time: '4:00 PM - 5:00 PM', title: 'Tug of War', description: 'Team up and test your strength in a game of Tug of War.', icon: <FaUsers /> },
   { time: '5:00 PM - 6:00 PM', title: 'Snacks & Closing Session', description: 'Enjoy some snacks and a closing session to wrap up the day.', icon: <FaCoffee /> },
-  { time: '6:00 PM', title: 'Departure', description: 'The bus will depart for the campus.', icon: <FaFlagCheckered /> },
+  { time: '6:00 PM', title: 'Departure', description: 'The bus will depart for the campus. Grab everything you need.', icon: <FaFlagCheckered /> },
 ];
 
 const Schedule = () => {
@@ -60,8 +60,8 @@ const Schedule = () => {
               <div
                 className={`relative flex items-center w-full md:w-1/2 ${
                   index % 2 === 0
-                    ? 'md:pr-10 md:text-right pl-16 md:pl-0'
-                    : 'md:pl-10 md:text-left pl-16 md:pl-0'
+                    ? 'md:pr-8 md:text-right pl-16 md:pl-0'
+                    : 'md:pl-8 md:text-left pl-16 md:pl-0'
                 }`}
               >
                 <motion.div
