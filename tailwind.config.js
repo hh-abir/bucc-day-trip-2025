@@ -8,6 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
+        sans: ['var(--font-poppins)', 'sans-serif'], // Set Poppins as default sans
         'platform-bold': ['var(--font-platform-bold)', 'sans-serif'],
       },
     },

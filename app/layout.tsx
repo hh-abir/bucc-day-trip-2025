@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Poppins } from "next/font/google"; // Import Poppins
 import localFont from 'next/font/local';
 import "./globals.css";
 import "slick-carousel/slick/slick.css";
@@ -13,6 +14,12 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-mono",
   subsets: ["latin"],
+});
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "700"], // Specify the weights you need
+  variable: "--font-poppins",
 });
 
 const platform = localFont({
@@ -55,12 +62,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${platform.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${platform.variable} ${poppins.variable} font-sans antialiased`}
       >
         {children}
       </body>
