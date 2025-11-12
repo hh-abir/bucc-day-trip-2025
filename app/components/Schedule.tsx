@@ -4,29 +4,33 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import {
+  FaWalking,
   FaBus,
   FaCoffee,
-  FaUtensils,
-  FaGamepad,
   FaUsers,
+  FaGamepad,
   FaMusic,
-  FaFlagCheckered,
-  FaWalking,
+  FaUtensils,
+  FaPrayingHands,
+  FaFlagCheckered
 } from 'react-icons/fa';
 
 const scheduleData = [
   { time: '7:00 AM', title: 'Arrival in Campus', description: 'All participants are requested to arrive at the campus on time.', icon: <FaWalking /> },
   { time: '7:30 AM', title: 'Journey Start', description: 'The bus will depart from the campus. Please ensure you are on board.', icon: <FaBus /> },
-  { time: '9:30 AM', title: 'Ice Breaking Session', description: 'A fun session to get to know your fellow participants.', icon: <FaUsers /> },
-  { time: '10:00 AM', title: 'Tic Tac Toe', description: 'Engage in a classic game of Tic Tac Toe with a twist!', icon: <FaGamepad /> },
-  { time: '11:00 AM - 1:00 PM', title: 'Football & Cricket', description: 'Enjoy outdoor sports activities like Football and Cricket.', icon: <FaGamepad /> },
-  { time: '1:00 PM - 2:30 PM', title: 'Lunch', description: 'A delicious lunch will be served.', icon: <FaUtensils /> },
-  { time: '2:30 PM - 3:00 PM', title: 'Indoor Activity', description: 'Participate in various indoor games and activities.', icon: <FaGamepad /> },
-  { time: '3:00 PM - 4:00 PM', title: 'Musical Chair', description: 'A lively game of musical chairs for everyone.', icon: <FaMusic /> },
-  { time: '4:00 PM - 5:00 PM', title: 'Tug of War', description: 'Team up and test your strength in a game of Tug of War.', icon: <FaUsers /> },
-  { time: '5:00 PM - 6:00 PM', title: 'Snacks & Closing Session', description: 'Enjoy some snacks and a closing session to wrap up the day.', icon: <FaCoffee /> },
-  { time: '6:00 PM', title: 'Departure', description: 'The bus will depart for the campus. Grab everything you need.', icon: <FaFlagCheckered /> },
+  { time: '8:30 AM', title: 'Breakfast (On Journey)', description: 'Enjoy breakfast while traveling to the resort.', icon: <FaCoffee /> },
+  { time: '9:30 AM', title: 'Arrival at Resort', description: 'Reach the resort and get ready for the day’s activities.', icon: <FaWalking /> },
+  { time: '10:00 AM', title: 'Ice Breaking Session', description: 'A fun session to get to know your fellow participants.', icon: <FaUsers /> },
+  { time: '11:00 AM', title: 'Activities (Games, Pool, Etc.)', description: 'Enjoy various games and pool activities at the resort.', icon: <FaGamepad /> },
+  { time: '1:30 PM - 1:45 PM', title: 'Jummah Namaz', description: "Take a short break for Jummah prayer. Please gather at the designated prayer area on time.", icon: <FaPrayingHands /> },
+  { time: '2:00 PM - 3:00 PM', title: 'Lunch', description: 'A delicious lunch will be served.', icon: <FaUtensils /> },
+  { time: '3:00 PM - 4:30 PM', title: 'More Activities (Culture Programs, Fun Time, Etc.)', description: 'Enjoy cultural programs, fun activities, and free time.', icon: <FaMusic /> },
+  { time: '4:45 PM - 5:15 PM', title: 'Snacks & Closing Session', description: 'Grab some snacks and join the closing session.', icon: <FaCoffee /> },
+  { time: '5:30 PM', title: 'Departure', description: 'The bus will depart for the campus. Don’t forget your belongings.', icon: <FaFlagCheckered /> },
 ];
+
+
+
 
 const Schedule = () => {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
