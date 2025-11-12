@@ -18,7 +18,7 @@ const Terms = () => {
         transition={{ duration: 0.8 }}
         className="container mx-auto text-center"
       >
-        <h2 className="text-3xl font-bold text-center mb-12 section-title-gradient font-platform-bold">
+        <h2 className="text-5xl font-bold text-center mb-12 section-title-gradient font-platform-bold">
           Terms and Conditions
         </h2>
         <div className="max-w-3xl mx-auto text-left px-4 bg-white p-6 rounded-lg shadow-md">
