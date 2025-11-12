@@ -26,7 +26,7 @@ const WhatsIncluded = () => {
             <IncludedCard
               icon={<FaBus className="w-12 h-12 text-blue-500" />}
               title="Travel"
-              description="Round-trip transportation from BRAC University to the resort by AC bus."
+              description="Round-trip transportation from BRAC University to the resort by bus."
             />
           </motion.div>
           <motion.div variants={cardVariants} initial="hidden" animate={inView ? 'visible' : 'hidden'} transition={{ duration: 0.5, delay: 0.2 }}>
