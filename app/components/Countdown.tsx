@@ -12,7 +12,7 @@ const Countdown = () => {
 
   const calculateTimeLeft = () => {
     const year = new Date().getFullYear();
-    const difference = +new Date(`11/30/${year}`) - +new Date();
+    const difference = +new Date(`12/01/${year}`) - +new Date();
     let timeLeft = {};
 
     if (difference > 0) {
