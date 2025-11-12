@@ -59,7 +59,7 @@ export default function RootLayout({
       <head>
       </head>
       <body
-        className={`${geistSans.variable} ${platform.variable} ${poppins.variable} font-sans antialiased`}
+        className={`${geistSans.variable} ${platform.variable} ${poppins.className} antialiased`}
       >
         {children}
       </body>
