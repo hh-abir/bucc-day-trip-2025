@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Platform';
+    src: local('Platform Bold'), local('Platform-Bold'),
+        url('Platform-Bold.woff2') format('woff2'),
+        url('Platform-Bold.woff') format('woff'),
+        url('Platform-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }

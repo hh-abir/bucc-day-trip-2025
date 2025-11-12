@@ -37,23 +37,19 @@ const Header = () => {
     >
       <div className="container mx-auto flex justify-between items-center p-4">
         <div className="flex items-center">
-          <img src="/bucclogo.png" alt="BUCC Logo" className="h-16 w-auto mr-2"/>
+          <img src="/bucclogo.png" alt="BUCC Logo" className="h-16 w-auto mr-4" />
         </div>
-        <nav className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 space-x-4">
-          <a href="#about" className={`hover:text-blue-500 ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
-            About
-          </a>
-          <a href="#schedule" className={`hover:text-blue-500 ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
+        <nav className="hidden md:flex space-x-6 ml-auto">
+          <a href="#schedule" className={`font-bold hover:text-blue-500 ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
             Schedule
           </a>
-          <a href="#venue" className={`hover:text-blue-500 ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
+          <a href="#venue" className={`font-bold hover:text-blue-500 ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
             Venue
           </a>
-          <a href="#faq" className={`hover:text-blue-500 ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
+          <a href="#faq" className={`font-bold hover:text-blue-500 ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
             FAQ
           </a>
         </nav>
-        <div></div> {/* Placeholder for right side */}
       </div>
     </motion.header>
   );

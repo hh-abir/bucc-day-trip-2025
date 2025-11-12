@@ -34,7 +34,7 @@ const Venue = () => {
   return (
     <section id="venue" className="py-20 bg-gray-100 text-gray-900" ref={ref}>
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12 section-title-gradient">Venue</h2>
+        <h2 className="text-3xl font-bold text-center mb-12 section-title-gradient font-platform-bold">Venue</h2>
         <div className="flex flex-col md:flex-row items-center gap-8">
           {/* Image Carousel */}
           <motion.div

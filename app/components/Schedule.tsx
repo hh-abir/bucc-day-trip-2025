@@ -83,7 +83,7 @@ const Schedule = () => {
   return (
     <section id="schedule" className="py-20 bg-gray-100 text-gray-900" ref={ref}>
       <div className="container mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-12 section-title-gradient">Trip Schedule</h2>
+        <h2 className="text-3xl font-bold text-center mb-12 section-title-gradient font-platform-bold">Trip Schedule</h2>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}

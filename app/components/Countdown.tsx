@@ -12,7 +12,7 @@ const Countdown = () => {
 
   const calculateTimeLeft = () => {
     const year = new Date().getFullYear();
-    const difference = +new Date(`12/05/${year}`) - +new Date();
+    const difference = +new Date(`11/30/${year}`) - +new Date();
     let timeLeft = {};
 
     if (difference > 0) {
@@ -62,7 +62,7 @@ const Countdown = () => {
 
   return (
     <div className="grid grid-flow-col gap-5 text-center auto-cols-max justify-center">
-      {timerComponents.length ? timerComponents : <span>Time's up!</span>}
+      {timerComponents.length ? timerComponents : <span>Registration Closed!</span>}
     </div>
   );
 };
