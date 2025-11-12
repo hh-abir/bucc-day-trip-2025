@@ -41,7 +41,7 @@ const Schedule = () => {
     <section
       id="schedule"
       ref={ref}
-      className="py-20 bg-gradient-to-b from-blue-60 to-white text-gray-900"
+      className="py-20 bg-gradient-to-b from-blue-50 to-white text-gray-900"
     >
       <div className="container mx-auto px-6">
         
