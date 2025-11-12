@@ -12,7 +12,7 @@ const Opportunity = () => {
 
   return (
     <section id="opportunity" className="py-20 bg-white text-gray-900" ref={ref}>
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row gap-8">
           <div className="md:w-1/2">
             <h2 className="text-3xl font-bold mb-8 section-title-gradient font-platform-bold text-left">Why You Shouldn't Miss The Opportunity</h2>
