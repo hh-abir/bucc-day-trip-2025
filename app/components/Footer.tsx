@@ -31,23 +31,29 @@ const Footer = () => {
         <div>
           <h3 className="text-xl font-bold mb-4">Communication</h3>
           <p className="text-lg font-semibold mb-2">General Communication:</p>
-          <p className="mb-1">
-            <FaPhone className="mr-2 inline-block" /> Abrar Shaleheen <br />
-            <span className="ml-6 text-sm">Senior Executive, Communication & Marketing</span> <br />
-            <span className="ml-6 text-sm">Cell: <a href="tel:+8801765859336" className="hover:underline">01765859336</a></span>
-          </p>
-          <p className="mb-1">
-            <FaPhone className="mr-2 inline-block" /> Nowrin Afrin <br />
-            <span className="ml-6 text-sm">Senior Executive, Event Management</span> <br />
-            <span className="ml-6 text-sm">Cell: <a href="tel:+8801617611664" className="hover:underline">01617611664</a></span>
-          </p>
+          <div className="mb-1">
+            <p><FaPhone className="mr-2 inline-block" /> Abrar Shaleheen</p>
+            <div className="ml-6 text-sm">
+              <p>Senior Executive, Communication & Marketing</p>
+              <p>Cell: <a href="tel:+8801765859336" className="hover:underline">01765859336</a></p>
+            </div>
+          </div>
+          <div className="mb-1">
+            <p><FaPhone className="mr-2 inline-block" /> Nowrin Afrin</p>
+            <div className="ml-6 text-sm">
+              <p>Senior Executive, Event Management</p>
+              <p>Cell: <a href="tel:+8801617611664" className="hover:underline">01617611664</a></p>
+            </div>
+          </div>
           
           <p className="text-lg font-semibold mt-4 mb-2">Payment Related Issues:</p>
-          <p>
-            <FaPhone className="mr-2 inline-block" /> Jauad Ahmed Sadik <br />
-            <span className="ml-6 text-sm">Senior Executive, Finance</span> <br />
-            <span className="ml-6 text-sm">Cell: <a href="tel:+8801732644303" className="hover:underline">01732644303</a></span>
-          </p>
+          <div>
+            <p><FaPhone className="mr-2 inline-block" /> Jauad Ahmed Sadik</p>
+            <div className="ml-6 text-sm">
+              <p>Senior Executive, Finance</p>
+              <p>Cell: <a href="tel:+8801732644303" className="hover:underline">01732644303</a></p>
+            </div>
+          </div>
         </div>
 
         {/* Google Map */}
