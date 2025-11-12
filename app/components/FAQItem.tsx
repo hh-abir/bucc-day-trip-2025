@@ -1,10 +1,11 @@
 'use client';
 
 import { useState } from 'react';
+import React from 'react';
 
 interface FAQItemProps {
   question: string;
-  answer: string;
+  answer: React.ReactNode;
 }
 
 const FAQItem = ({ question, answer }: FAQItemProps) => {
