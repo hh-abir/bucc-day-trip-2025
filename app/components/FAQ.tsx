@@ -19,10 +19,10 @@ const faqData = [
     answer: (
       <>
         Abrar Shaleheen <br />
-        Senior Executive, Communication & Marketing Cell <br />
+        Senior Executive, Communication & Marketing <br />
         Cell No: 01765859336 <br />
         Nowrin Afrin <br />
-        Senior Executive, Event Management Cell <br />
+        Senior Executive, Event Management <br />
         Cell No: 01617611664
       </>
     ),

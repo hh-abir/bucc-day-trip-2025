@@ -21,11 +21,8 @@ const About = () => {
           transition={{ duration: 0.8 }}
           className="max-w-3xl mx-auto text-center"
         >
-          <p className="text-lg mb-4">
-            Join us for an unforgettable day-long trip organized by the BRAC University Computer Club (BUCC). This is a great opportunity to unwind, network with peers, and participate in fun activities.
-          </p>
           <p className="text-lg mb-8">
-            The trip is open to all students of BRAC University, regardless of their department. We encourage you to bring your friends and make new ones!
+            Embark on an exciting day-long adventure with the BRAC University Computer Club (BUCC)! This exclusive trip offers a perfect blend of relaxation, networking, and engaging activities. Exclusively for BUCC members, it's your chance to connect with fellow members from GB and 7 departments (EB, E, GM) without any work or academic pressure, unwind, and create lasting memories. Don't miss out on this unique opportunity to strengthen bonds and enjoy a day filled with fun!
           </p>
         </motion.div>
         <motion.div
