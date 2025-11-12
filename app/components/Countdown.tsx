@@ -51,7 +51,7 @@ const Countdown = () => {
     }
 
     timerComponents.push(
-      <div key={interval} className="text-center">
+      <div key={interval} className="text-left">
         <span className="text-4xl font-bold">
           {timeLeft[interval as keyof typeof timeLeft]}
         </span>
@@ -61,7 +61,7 @@ const Countdown = () => {
   });
 
   return (
-    <div className="grid grid-flow-col gap-5 text-center auto-cols-max justify-center">
+    <div className="grid grid-flow-col gap-5 auto-cols-max justify-start">
       {timerComponents.length ? timerComponents : <span>Registration Closed!</span>}
     </div>
   );

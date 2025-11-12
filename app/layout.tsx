@@ -22,10 +22,10 @@ const platform = localFont({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://bucc-day-trip-2025.vercel.app"), // Set the deployment URL
-  title: "BUCC Day Long Tour 2025",
+  title: "BUCC Presents লুপের বাইরে",
   description: "Join BRAC University Computer Club for an unforgettable day-long trip filled with fun, networking, and adventure!",
   openGraph: {
-    title: "BUCC Day Long Tour 2025",
+    title: "BUCC Presents লুপের বাইরে",
     description: "Join BRAC University Computer Club for an unforgettable day-long trip filled with fun, networking, and adventure!",
     url: "https://bucc-day-trip-2025.vercel.app", // Placeholder, replace with actual deployment URL
     siteName: "BUCC Day Long Tour 2025",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "BUCC Day Long Tour 2025",
+    title: "BUCC Presents লুপের বাইরে",
     description: "Join BRAC University Computer Club for an unforgettable day-long trip filled with fun, networking, and adventure!",
     images: ["/embed.png"],
   },
