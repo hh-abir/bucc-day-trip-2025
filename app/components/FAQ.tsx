@@ -16,11 +16,26 @@ const faqData = [
   },
   {
     question: 'Who can I contact for general communication?',
-    answer: 'For general communication, you can contact: Abrar Shaleheen - 01765859336, Nowrin Afrin - 01617611664.',
+    answer: (
+      <>
+        Abrar Shaleheen <br />
+        Senior Executive, Communication & Marketing Cell <br />
+        Cell No: 01765859336 <br />
+        Nowrin Afrin <br />
+        Senior Executive, Event Management Cell <br />
+        Cell No: 01617611664
+      </>
+    ),
   },
   {
     question: 'Who can I contact for payment related issues?',
-    answer: 'For payment related issues, you can contact: Sadik - 01732644303.',
+    answer: (
+      <>
+        Jauad Ahmed Sadik <br />
+        Senior Executive, Finance <br />
+        Cell No: 01732644303
+      </>
+    ),
   },
 ];
 

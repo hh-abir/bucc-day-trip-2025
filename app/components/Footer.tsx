@@ -16,48 +16,49 @@ const Footer = () => {
           <p>BRAC University Computer Club is a community of tech enthusiasts and learners.</p>
         </div>
 
-        {/* Quick Links (Example) */}
+        {/* Contact Us Section */}
         <div>
-          <h3 className="text-xl font-bold mb-4">Quick Links</h3>
-          <ul>
-            <li className="mb-2"><a href="#about" className="hover:underline">About</a></li>
-            <li className="mb-2"><a href="#schedule" className="hover:underline">Schedule</a></li>
-            <li className="mb-2"><a href="#venue" className="hover:underline">Venue</a></li>
-            <li><a href="#faq" className="hover:underline">FAQ</a></li>
-          </ul>
-        </div>
-
-        {/* Contact Section */}
-        <div>
-          <h3 className="text-xl font-bold mb-4">Contact</h3>
+          <h3 className="text-xl font-bold mb-4">Contact Us</h3>
           <p className="flex items-center mb-2">
             <FaEnvelope className="mr-2" /> Email: bucc@g.bracu.ac.bd
           </p>
-          <p className="flex items-center mb-2">
+          <p className="flex items-center mb-4">
             <FaGlobe className="mr-2" /> Website: <a href="https://www.bracucc.org/" target="_blank" rel="noopener noreferrer" className="hover:underline ml-1">www.bracucc.org</a>
           </p>
-          <p className="text-lg font-semibold mt-4 mb-2">General Communication:</p>
-          <p className="flex items-center mb-1">
-            <FaPhone className="mr-2" /> Abrar Shaleheen: <a href="tel:+8801765859336" className="hover:underline ml-1">01765859336</a>
+        </div>
+
+        {/* Communication Section */}
+        <div>
+          <h3 className="text-xl font-bold mb-4">Communication</h3>
+          <p className="text-lg font-semibold mb-2">General Communication:</p>
+          <p className="mb-1">
+            <FaPhone className="mr-2 inline-block" /> Abrar Shaleheen <br />
+            <span className="ml-6 text-sm">Senior Executive, Communication & Marketing</span> <br />
+            <span className="ml-6 text-sm">Cell: <a href="tel:+8801765859336" className="hover:underline">01765859336</a></span>
           </p>
-          <p className="flex items-center mb-1">
-            <FaPhone className="mr-2" /> Nowrin Afrin: <a href="tel:+8801617611664" className="hover:underline ml-1">01617611664</a>
+          <p className="mb-1">
+            <FaPhone className="mr-2 inline-block" /> Nowrin Afrin <br />
+            <span className="ml-6 text-sm">Senior Executive, Event Management</span> <br />
+            <span className="ml-6 text-sm">Cell: <a href="tel:+8801617611664" className="hover:underline">01617611664</a></span>
           </p>
+          
           <p className="text-lg font-semibold mt-4 mb-2">Payment Related Issues:</p>
-          <p className="flex items-center">
-            <FaPhone className="mr-2" /> Sadik: <a href="tel:+8801732644303" className="hover:underline ml-1">01732644303</a>
+          <p>
+            <FaPhone className="mr-2 inline-block" /> Jauad Ahmed Sadik <br />
+            <span className="ml-6 text-sm">Senior Executive, Finance</span> <br />
+            <span className="ml-6 text-sm">Cell: <a href="tel:+8801732644303" className="hover:underline">01732644303</a></span>
           </p>
         </div>
 
         {/* Google Map */}
-        <div className="md:col-span-1">
+        <div>
           <h3 className="text-xl font-bold mb-4">Location Map</h3>
           <div className="aspect-w-16 aspect-h-9">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.9400000000004!2d90.39945200000001!3d23.840330000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755d99d3803b7cd%3A0xe68b9ebcb437c3db!2sSAHEB%20BARI%20RESORT!5e0!3m2!1sen!2sbd!4v1678912345678!5m2!1sen!2sbd"
               width="100%"
               height="200"
-              style={{ border: 0 }}
+              style={{ border: 0, borderRadius: '8px' }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
