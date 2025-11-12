@@ -20,7 +20,7 @@ const faqData = [
       <>
         Abrar Shaleheen <br />
         Senior Executive, Communication & Marketing <br />
-        Cell No: 01765859336 <br />
+        Cell No: 01765859336 <br /><br />
         Nowrin Afrin <br />
         Senior Executive, Event Management <br />
         Cell No: 01617611664
