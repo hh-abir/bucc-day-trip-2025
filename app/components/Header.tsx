@@ -40,13 +40,13 @@ const Header = () => {
           <img src="/bucclogo.png" alt="BUCC Logo" className="h-16 w-auto mr-4" />
         </div>
         <nav className="hidden md:flex space-x-6 ml-auto">
-          <a href="#schedule" className={`font-bold hover:text-blue-500 ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
+          <a href="#schedule" className={`font-bold hover:text-blue-500 transition ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
             Schedule
           </a>
-          <a href="#venue" className={`font-bold hover:text-blue-500 ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
+          <a href="#venue" className={`font-bold hover:text-blue-500 transition ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
             Venue
           </a>
-          <a href="#faq" className={`font-bold hover:text-blue-500 ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
+          <a href="#faq" className={`font-bold hover:text-blue-500 transition ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
             FAQ
           </a>
         </nav>
