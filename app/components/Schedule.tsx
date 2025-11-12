@@ -33,7 +33,7 @@ const scheduleData = [
 
 const Schedule = () => {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
-  const [isExpanded, setIsExpanded] = useState(true);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleExpanded = () => setIsExpanded(!isExpanded);
 
