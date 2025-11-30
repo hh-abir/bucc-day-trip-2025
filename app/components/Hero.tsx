@@ -68,7 +68,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="mb-8"
         >
-          <div className="text-center mb-6">
+          <div className="text-center mb-2">
             <h2 className="text-2xl md:text-3xl font-bold mb-2 text-white/90">
               Registration is closed.
             </h2>
@@ -80,6 +80,7 @@ const Hero = () => {
 
 
         </motion.div>
+
 
         {/* Buttons */}
         <motion.div
