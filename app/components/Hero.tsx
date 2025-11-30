@@ -85,10 +85,10 @@ const Hero = () => {
             T&Cs
           </a>
           <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLScExVF0Ii7g9A_IgqEI0Gp54bVNduyTddoNE3y3ZYQmjGZ2JQ/viewform"
+            href="#schedule"
             className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg transform transition-transform duration-200 hover:scale-105 text-center"
           >
-            Register Now
+            Schedule
           </a>
         </motion.div>
       </div>
