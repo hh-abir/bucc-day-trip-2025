@@ -49,7 +49,14 @@ const Schedule = () => {
         <h2 className="text-4xl font-extrabold text-center mb-12 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent font-platform-bold">
           Trip Schedule
         </h2>
+
         <div className="flex justify-center mb-6">
+<a
+  href="https://drive.google.com/file/d/1AIkSx4FAJwBapOhX2pXwZKKvSLPFBeSL/view?fbclid=IwY2xjawOeNplleHRuA2FlbQIxMQBzcnRjBmFwcF9pZAwzNTA2ODU1MzE3MjgAAR4Q4wukAiSaGbuuF9R9VePjePk4bHpNql8c2tYhg6bGYCKv8NnbHR8asr-yMQ_aem_P3GfELPxmQMZMI0Lr2L4Bw"
+  className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition"
+>
+  Download Schedule
+</a>
           <button
             onClick={toggleExpanded}
             className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition"
