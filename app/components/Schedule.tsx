@@ -57,13 +57,7 @@ const Schedule = () => {
 >
   Download Schedule
 </a>
-          <button
-            onClick={toggleExpanded}
-            className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition"
-          >
-            {isExpanded ? 'Hide Schedule' : 'Show Schedule'}
-            {isExpanded ? <FaChevronUp /> : <FaChevronDown />}
-          </button>
+          
         </div>
 
         <motion.div
