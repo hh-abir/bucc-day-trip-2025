@@ -1,36 +1,106 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+# 🏕️ Looperbaire | BUCC Tour Website
+
+> The official tour and travel showcase platform for the BRAC University Computer Club (BUCC).
+
+**Looperbaire** is a sleek, responsive website built to highlight upcoming club tours, share past trip galleries, and provide students with detailed itineraries and registration portals for BUCC adventures.
+
+---
+
+## 📸 Platform Gallery
+
+<table>
+<tr>
+<td align="center">
+<img src="docs/Capture1.PNG" alt="Landing Page" width="100%"/>
+
+
+
+
+<em>Home & Hero Section</em>
+</td>
+<td align="center">
+<img src="docs/Capture2.PNG" alt="Tour Itinerary" width="100%"/>
+
+
+
+
+<em>Footer</em>
+</td>
+
+</tr>
+</table>
+
+---
+
+## 🚀 Tech Stack
+
+This project is built using modern web standards to ensure a fast, SEO-friendly, and responsive experience across all devices.
+
+* **Framework:** [Next.js](https://nextjs.org/) (React)
+* **Styling:** Tailwind CSS (for rapid, responsive UI design)
+* **Language:** JavaScript / TypeScript
+* **Deployment:** Vercel (Recommended)
+
+---
+
+## ⚙️ Getting Started
+
+Follow these steps to run the **Looperbaire** website on your local machine.
+
+### 1. Clone the Repository
+
+Open your terminal and clone this repository:
+
+```bash
+git clone https://github.com/your-username/looperbaire.git
+cd looperbaire
+
+```
+
+### 2. Install Dependencies
+
+Install all the required NPM packages:
+
+```bash
+npm install
+
+```
+
+### 3. Run the Development Server
+
+Start the local Next.js server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](https://www.google.com/search?q=http://localhost:3000) with your browser to see the result. The page will auto-update as you edit the files.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📂 Project Structure
 
-## Learn More
+A quick look at the core folders to help you navigate the codebase:
 
-To learn more about Next.js, take a look at the following resources:
+* **`/app`** (or `/pages`): Contains the main routing, views, and core pages (Home, About, Itinerary).
+* **`/components`**: Reusable UI elements (Navbar, Footer, TourCards, Buttons).
+* **`/public`**: Static assets like logos, background images, and icons.
+* **`/docs`**: Documentation assets, including the showcase screenshots.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🤝 Contributing
 
-## Deploy on Vercel
+Are you a BUCC member looking to improve the site? Contributions, issues, and feature requests are welcome!
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
